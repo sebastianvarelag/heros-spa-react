@@ -16,6 +16,7 @@ export const Navbar = () => {
           }
         </ul>
         <ul className="flex flex-row items-center">
+          <li className="px-4 mr-6 text-white rounded-lg bg-slate-600">Sebita Varela</li>
           <li className="flex h-full mx-2">
             <NavLink to={'search'} className="self-center px-4 text-white cursor-pointer">
               <span>Search</span>

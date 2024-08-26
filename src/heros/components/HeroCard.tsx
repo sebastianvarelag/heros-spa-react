@@ -16,7 +16,6 @@ type props = {
 }
 
 export const HeroCard = ({hero: hero}: props) => {
-  console.log(hero.id);
 
   return (
     <>
