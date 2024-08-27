@@ -1,7 +1,6 @@
 
 export type State = {
   isLoggedIn: boolean,
-  user: User | undefined
 }
 
 export type propsNode = {

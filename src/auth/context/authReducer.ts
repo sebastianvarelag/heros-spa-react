@@ -1,10 +1,9 @@
-import { AuthAction, State } from "../types/types"
+import { AuthAction, State, User } from "../types/types"
 
 
 
 const initialState = {
   isLoggedIn: false,
-  user: undefined,
 };
 
 export const authReducer = (state:State = initialState, action: AuthAction) => {

@@ -15,7 +15,7 @@ const init = () =>{
     user = JSON.parse(user);
     return{
       isLoggedIn: true,
-      user: undefined
+      user: user
     }
   }
   return{
@@ -38,7 +38,6 @@ export const AuthProvider = ({children}: propsNode) => {
     dispatch({type: 'LOGIN', user});
     
     localStorage.setItem('user', JSON.stringify(user));
-    
   }
 
   const logout = () => {
