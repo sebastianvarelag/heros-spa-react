@@ -8,7 +8,7 @@ export const Login = () => {
   const { login } = useContext(AuthContext)
 
   const handleLogin = () => {
-    login('User')
+    login('User 1')
   }
 
   return (

@@ -7,8 +7,7 @@ export const PublicRouter = ({children}: propsNode) => {
 
   const {state} = useContext(AuthContext);
 
-  
   return (state.isLoggedIn)
-      ? <Navigate to={"/"}/>
+      ? <Navigate to={'/'}/>
       : children
 }

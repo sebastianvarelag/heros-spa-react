@@ -9,18 +9,42 @@ const initialState = {
   user: undefined,
 };
 
+const init = () =>{
+  let user = localStorage.getItem('user');
+  if(typeof user === 'string'){
+    user = JSON.parse(user);
+    return{
+      isLoggedIn: true,
+      user: undefined
+    }
+  }
+  return{
+    isLoggedIn: false,
+    user: undefined
+  }
+}
+
+
 export const AuthProvider = ({children}: propsNode) => {
 
-  const [state, dispatch] = useReducer(authReducer, initialState)
+  const [state, dispatch] = useReducer(authReducer, initialState, init)
 
   const login = (name: string = '') =>{
-    dispatch({type: 'LOGIN', user: {id: 'ABC123' , username: name} });
-    console.log('Logged');
+    const user = {
+      id: 'ABC123', 
+      username: name
+    } 
+    
+    dispatch({type: 'LOGIN', user});
+    
+    localStorage.setItem('user', JSON.stringify(user));
     
   }
 
   const logout = () => {
     dispatch({type: 'LOGOUT' });
+
+    localStorage.removeItem('user');
   }
 
   return (
