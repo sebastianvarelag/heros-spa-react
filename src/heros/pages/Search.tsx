@@ -1,11 +1,6 @@
-import { useLocation, useNavigate } from "react-router-dom";
 import { LayoutHero } from "../layout/LayoutHero"
-import queryString from 'query-string';
 
 export const Search = () => {
-
-  const navigator = useNavigate();
-  const {search} = useLocation();
 
   return (
     <>
