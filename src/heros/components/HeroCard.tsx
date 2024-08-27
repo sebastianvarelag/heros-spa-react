@@ -1,15 +1,9 @@
+import { superhero } from '../../auth/types/types';
 import { ButtonCard } from '../../ui/components/ButtonCard'
 import { Link } from 'react-router-dom'
 
 
-type superhero ={
-  id: string,
-  superhero: string,
-  publisher: string,
-  alter_ego: string,
-  first_appearance: string,
-  characters: string,
-}
+
 
 type props = {
   hero: superhero;

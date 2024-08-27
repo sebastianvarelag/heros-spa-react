@@ -1,7 +1,7 @@
 import { FC } from "react";
 
 type props = {
-  title: string;
+  title: string | undefined;
   children: React.ReactNode
 }
 

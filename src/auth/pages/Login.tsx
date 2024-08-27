@@ -14,11 +14,11 @@ export const Login = () => {
   return (
     <LayoutHero title="Login">
         <div className="flex justify-center text-white">
+          <span onClick={handleLogin}>
           <ButtonCard>
-            <span onClick={handleLogin}>
               Login
-            </span>
           </ButtonCard>
+          </span>
         </div>
     </LayoutHero>
   )

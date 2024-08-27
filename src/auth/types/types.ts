@@ -15,3 +15,12 @@ export type User = {
 export type AuthAction =
 | { type: 'LOGIN'; user: User }
 | { type: 'LOGOUT' };
+
+export type superhero ={
+  id: string,
+  superhero: string,
+  publisher: string,
+  alter_ego: string,
+  first_appearance: string,
+  characters: string,
+}

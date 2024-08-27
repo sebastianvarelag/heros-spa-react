@@ -32,7 +32,7 @@ export const Navbar = () => {
         <ul className="flex flex-row items-center">
           <li className="px-4 mr-6 text-white rounded-lg bg-slate-600">{state.user?.username}</li>
           <li className="flex h-full mx-2">
-            <NavLink to={'search'} className="self-center px-4 text-white cursor-pointer">
+            <NavLink to={'search'} className={(args) => `self-center px-4 text-white ${args.isActive ? "isActive" : ""}`}>
               <span>Search</span>
             </NavLink>
             <span className="self-center px-4 text-white cursor-pointer"
