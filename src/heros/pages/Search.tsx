@@ -7,11 +7,6 @@ export const Search = () => {
   const navigator = useNavigate();
   const {search} = useLocation();
 
-  const q = queryString.parse(search);
-
-  console.log(q);
-  
-
   return (
     <>
       <LayoutHero title="Search">
