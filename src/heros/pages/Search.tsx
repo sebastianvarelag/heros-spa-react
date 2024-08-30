@@ -5,6 +5,7 @@ import { ButtonComponent } from "../../ui/components/ButtonComponent";
 import { useForm } from "../../hooks/useForm";
 import { getHeroBySearch } from "../helpers/getHeroBySearch";
 import { superhero } from "../../auth/types/types";
+import { HeroCard } from "../components/HeroCard";
 
 type formQuery = {
   searchText: string | (string | null)[] | null,
@@ -68,9 +69,11 @@ export const Search = () => {
                   </div>
               }
 
-              {
-                hero.map(hero => <h1 key={hero.id}>{hero.id}</h1>)
-              }
+              <div className="flex flex-grow gap-3">
+                {
+                  hero.map(hero => <HeroCard key={hero.id} hero={hero}/>)
+                }
+              </div>
 
             </div>
           </div>
